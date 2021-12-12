@@ -123,10 +123,11 @@ html {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png');
   display: inline-block;
   margin: 1px ;
-  border: solid black;
-  border-radius : 1px;
-  padding: 20px;
-  color: black;
+  border: solid #1D1E24;
+  border-radius : 5px;
+  padding: 10px;
+  color: #878e99;
+  margin-top: 2px;
 }
 
 body {
