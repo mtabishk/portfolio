@@ -122,16 +122,9 @@ html {
 .box{
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png');
   display: inline-block;
-  margin: 5px ;
-  border: solid white;
-  border-radius : 10px;
+  margin: 1px ;
   padding: 20px;
-  background-color: yellow;
   color: black;
-}
-.box:hover{
-  background-color: red;
-
 }
 
 body {
