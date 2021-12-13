@@ -43,19 +43,19 @@
                                 <!-- social sharea area -->
                                 <div class="social-share-style-1 border-none mt--40">
                                     <ul class="social-share d-flex liststyle">
-                                        <li class="linkedin"><a href="https://www.linkedin.com/in/mtabishk/"><i class="fa fa-github-square" style="font-size:30px;color:#F5054F"></i>
+                                        <li class="linkedin"><a target=_blank href="https://github.com/mtabishk"><i class="fa fa-github-square" style="font-size:30px;color:#F5054F"></i>
                                         </a>
                                         </li>
-                                        <li class="linkedin"><a href="https://www.linkedin.com/in/mtabishk/"><i class="fa fa-linkedin-square" style="font-size:30px;color:#F5054F"></i>
+                                        <li class="linkedin"><a target=_blank href="https://www.linkedin.com/in/mtabishk"><i class="fa fa-linkedin-square" style="font-size:30px;color:#F5054F"></i>
                                         </a>
                                         </li>
-                                        <li class="linkedin"><a href="https://www.linkedin.com/in/mtabishk/"><i class="fa fa-instagram" style="font-size:30px;color:#F5054F"></i>
+                                        <li class="linkedin"><a target=_blank href="https://www.instagram.com/m_tabishhh/"><i class="fa fa-instagram" style="font-size:30px;color:#F5054F"></i>
                                         </a>
                                         </li>
-                                        <li class="linkedin"><a href="https://www.linkedin.com/in/mtabishk/"><i class="fa fa-twitter-square" style="font-size:30px;color:#F5054F"></i>
+                                        <li class="linkedin"><a target=_blank href="https://twitter.com/_mtabishk"><i class="fa fa-twitter-square" style="font-size:30px;color:#F5054F"></i>
                                         </a>
                                         </li>
-                                        <li class="linkedin"><a href="https://www.linkedin.com/in/mtabishk/"><i class="fa fa-medium" style="font-size:30px;color:#F5054F"></i>
+                                        <li class="linkedin"><a target=_blank href="https://mtabishk999.medium.com/"><i class="fa fa-medium" style="font-size:30px;color:#F5054F"></i>
                                         </a>
                                         </li>
                                         
@@ -676,32 +676,24 @@
                                                                 <img src="assets/images/contact/contact1.png" alt="contact-img">
                                                             </div>
                                                             <div class="title-area">
-                                                                <h4 class="title">Nevine Acotanza</h4>
-                                                                <span>Chief Operating Officer</span>
+                                                                <h4 class="title">Choose me for your project.</h4>
+                                                                <span>Enter your information here, I will receive the email and I'll give you a response as soon as possible.</span>
                                                             </div>
                                                             <div class="description">
                                                                 <p>I am available for freelance work. Connect with me
-                                                                    via and call in to my account.
+                                                                    via email.
                                                                 </p>
-                                                                <span class="phone">Phone: <a
-                                                                        href="tel:01941043264">+01234567890</a></span>
+                                                                
                                                                 <span class="mail">Email: <a
-                                                                        href="mailto:admin@example.com">admin@example.com</a></span>
+                                                                        href="mailto:mtabishkhanday@gmail.com">mtabishkhanday@gmail.com</a></span>
                                                             </div>
-                                                            <div class="social-area">
-                                                                <div class="name">FIND WITH ME</div>
-                                                                <div class="social-icone">
-                                                                    <a href="#"><i data-feather="facebook"></i></a>
-                                                                    <a href="#"><i data-feather="linkedin"></i></a>
-                                                                    <a href="#"><i data-feather="instagram"></i></a>
-                                                                </div>
-                                                            </div>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div data-aos-delay="600" class="col-lg-7 contact-input">
                                                         <div class="contact-form-wrapper ml--0">
                                                             <div class="introduce">
-                                                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="https://rainbowit.net/html/inbio/mail.php">
+                                                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" onsubmit="sendEmail(); reset(); return false;">
 
                                                                     <div class="col-lg-6">
                                                                         <div class="form-group">
@@ -771,7 +763,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-area text-center">
-                        <p class="description mt--30">© 2021. All rights reserved by <a target="_blank" href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
+                        <p class="description mt--30">© 2021. All rights reserved by @mtabishk</a></p>
                     </div>
                 </div>
             </div>
@@ -1621,6 +1613,26 @@
     <script src="assets/js/vendor/particles.js"></script>
     <!-- main JS -->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                secureToken: "1a76798d-0ea3-42a0-ac1a-99e74e25f50e",
+                To: "mtabishkhanday@gmail.com",
+                From: document.getElementById("contact-email").value,
+                Subject: "New Contact Form Equiry on @mtabishk portfolio website",
+                Body: "Name: " + document.getElementById("contact-name").value
+                    + "<br> Email: " + document.getElementById("contact-email").value
+                    + "<br> Phone: " + document.getElementById("contact-phone").value
+                    + "<br> Subject: " + document.getElementById("subject").value
+                    + "<br> Message: " + document.getElementById("contact-message").value
+
+            }).then(
+                message => alert("Message sent successfully")
+            );
+        }
+    </script>
 </body>
 
 
